@@ -33,18 +33,18 @@ class Account  {
 }
 
 //Create an implementation of the below Interface
-public interface ATM {
-    boolean deposit(Account account, double amount);
-    boolean withdraw(Account account,double amount) throws Exception;
-    double getBalance();
-}
-
-
-public class Account {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
-}
+//public interface ATM {
+//    boolean deposit(Account account, double amount);
+//    boolean withdraw(Account account,double amount) throws Exception;
+//    double getBalance();
+//}
+//
+//
+//public class Account {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//	}
+//
+//}
