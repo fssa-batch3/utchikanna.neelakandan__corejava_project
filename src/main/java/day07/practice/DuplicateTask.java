@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class Task {
+public class DuplicateTask {
 
     private int id;
     private String name;
     private LocalDate deadline;
 
-    public Task(String name, int id,String date) {
+    public DuplicateTask(String name, int id,String date) {
         this.name = name;
         this.id = id;
         this.deadline = LocalDate.parse(date);
@@ -30,7 +30,7 @@ public class Task {
         if (obj == null || getClass() != obj.getClass()){
             return false;
         }
-        Task task = (Task) obj;
+        DuplicateTask task = (DuplicateTask) obj;
         return Objects.equals(name, task.name) && Objects.equals(deadline, task.deadline);
     }
 
@@ -40,19 +40,19 @@ public class Task {
     }
 
     public static void main(String[] args) {
-        ArrayList<Task> arr = new ArrayList <> ();
-        Task task1 = new Task("Car Wash",1,"2011-09-01");
-        Task task4 = new Task("Car Wash",4,"2011-09-01");
-        Task task2 = new Task("Shopping",3,"2012-05-15");
-        Task task3 = new Task("Haircut",5,"2013-02-24");
+        ArrayList<DuplicateTask> arr = new ArrayList <> ();
+        DuplicateTask task1 = new DuplicateTask("Car Wash",1,"2011-09-01");
+        DuplicateTask task4 = new DuplicateTask("Car Wash",4,"2011-09-01");
+        DuplicateTask task2 = new DuplicateTask("Shopping",3,"2012-05-15");
+        DuplicateTask task3 = new DuplicateTask("Haircut",5,"2013-02-24");
         arr.add(task1);
         arr.add(task2);
         arr.add(task3);
         arr.add(task4);
 
-        HashSet<Task> distinctTask = new HashSet<>(arr);
+        HashSet<DuplicateTask> distinctTask = new HashSet<>(arr);
 
-        for (Task i: distinctTask) {
+        for (DuplicateTask i: distinctTask) {
             System.out.println(i);
         }
 
