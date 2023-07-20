@@ -23,7 +23,6 @@ public class Employees {
 	            System.out.println(i + ": " + arr.get(i));
 	        }
 
-
 	}
 
 }
