@@ -1,11 +1,13 @@
 /**
  * 
  */
-package day02.solved;
+package day02.practice;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+
+import day02.solved.BankAccount;
 
 /**
  * @author Vinit Gore

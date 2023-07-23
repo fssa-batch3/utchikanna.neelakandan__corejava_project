@@ -5,10 +5,17 @@ public class Cat {
     private String speaks;
     private String color;
     private int age;
+    
+    public Cat(int age, String color, String speak) {
+
+		this.color = color;
+		this.age = age;
+		this.speaks = speaks;
+	}
 
 
     // Getters and setters
-    public String speaks() {
+    public String getSpeaks() {
         return speaks;
     }
 
@@ -35,26 +42,18 @@ public class Cat {
     // Main method to create Dog objects
     public static void main(String[] args) {
         // Create two Dog objects
-    	Cat cat1 = new Cat();
-    	cat1.setAge(4);
-    	cat1.setColor("White");
-    	cat1.setSpeaks("Meow!");
-        Cat cat2 = new Cat();
-        cat2.setAge(3);
-        cat2.setColor("Black");
-        cat2.setSpeaks("Meow!");
+    	Cat cat1 = new Cat(4, "purple", "Meow!");
+		Cat cat2 = new Cat(3, "blue", "Meow!");
 
-        // Print the attributes of each Dog
-        System.out.println("Cat 1:");
-        System.out.println("Age: " + cat1.getAge());
-        System.out.println("Color: " + cat1.getColor());
-        System.out.println("Speaks: " + cat1.speaks());
-     
+		System.out.println("Cat 1:");
+		System.out.println("Age : " + cat1.getAge());
+		System.out.println("Color: " + cat1.getColor());
+		System.out.println("Speak :" + cat1.getSpeaks());
 
-        System.out.println("Cat 2:");
-        System.out.println("Age: " + cat2.getAge());
-        System.out.println("Color: " + cat2.getColor());
-        System.out.println("Speaks: " + cat2.speaks());
+		System.out.println("Cat 2:");
+		System.out.println("Age : " + cat2.getAge());
+		System.out.println("Color: " + cat2.getColor());
+		System.out.println("Speak :" + cat2.getSpeaks());
         
     }
 }

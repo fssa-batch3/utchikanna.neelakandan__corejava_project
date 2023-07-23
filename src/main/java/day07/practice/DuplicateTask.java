@@ -17,29 +17,35 @@ public class DuplicateTask {
         this.deadline = LocalDate.parse(date);
     }
 
-    @Override
-    public String toString() {
-        return "Task : "+ name + ", Deadline :" + deadline + ", Id :" + id;
-    }
+    
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj){
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()){
-            return false;
-        }
-        DuplicateTask task = (DuplicateTask) obj;
-        return Objects.equals(name, task.name) && Objects.equals(deadline, task.deadline);
-    }
+	public String toString() {
+		return "id=" + id + ", name=" + name + ", deadline=" + deadline ;
+	}
+
 
     @Override
-    public int hashCode() {
-        return Objects.hash(name, deadline);
-    }
+	public int hashCode() {
+		return Objects.hash(deadline, id, name);
+	}
 
-    public static void main(String[] args) {
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DuplicateTask other = (DuplicateTask) obj;
+		return Objects.equals(deadline, other.deadline) && id == other.id && Objects.equals(name, other.name);
+	}
+
+
+
+	public static void main(String[] args) {
         ArrayList<DuplicateTask> arr = new ArrayList <> ();
         DuplicateTask task1 = new DuplicateTask("Car Wash",1,"2011-09-01");
         DuplicateTask task4 = new DuplicateTask("Car Wash",4,"2011-09-01");

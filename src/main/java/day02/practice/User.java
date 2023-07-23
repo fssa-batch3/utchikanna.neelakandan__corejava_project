@@ -4,7 +4,7 @@ public class User {
 	
 	private String name;
 	private int id;
-	private int pass;
+	private String pass;
 	private String email;
 	
 	public String getName() {
@@ -13,7 +13,7 @@ public class User {
 	public int getId() {
 		return id;
    	}
-	public int getPass() {
+	public String getPass() {
 		return pass;
    	}
 	
@@ -28,8 +28,8 @@ public class User {
 	public void setId(int id) {
 			this.id = id;
 		}
-	public void setPass(int pass) {
-			this.pass = pass;
+	public void setPass(String password) {
+			this.pass = password;
 		}
 	public void setEmail(String email) {
 			this.email = email;
@@ -42,12 +42,12 @@ public class User {
 		
 		user.setName("kanna");
 		user.setId(133);
-		user.setPass(3108);
+		user.setPass("3108");
 		user.setEmail("utchi@gmail");
 		
 		String name = user.getName();
 		int id = user.getId();
-		int pass = user.getPass();
+		String pass = user.getPass();
 		String email = user.getEmail();
 		
 		System.out.println(name); 
