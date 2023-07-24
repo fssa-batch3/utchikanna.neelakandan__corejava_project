@@ -17,7 +17,23 @@ public class Task {
     	this.taskName = taskName;
     }
     
-    @Override
+    public String getTaskName() {
+		return taskName;
+	}
+
+	public void setTaskName(String taskName) {
+		this.taskName = taskName;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
+	@Override
     public String toString() {
     	return "The Task is : "+ taskName +", Priority : "+priority;
     }

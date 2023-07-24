@@ -7,9 +7,9 @@ import java.util.Objects;
 
 public class DuplicateTask {
 
-    private int id;
-    private String name;
-    private LocalDate deadline;
+	public int id;
+	public String name;
+	public LocalDate deadline;
 
     public DuplicateTask(String name, int id,String date) {
         this.name = name;
@@ -19,7 +19,43 @@ public class DuplicateTask {
 
     
 
-    @Override
+    public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public LocalDate getDeadline() {
+		return deadline;
+	}
+
+
+
+	public void setDeadline(LocalDate deadline) {
+		this.deadline = deadline;
+	}
+
+
+
+	@Override
 	public String toString() {
 		return "id=" + id + ", name=" + name + ", deadline=" + deadline ;
 	}
