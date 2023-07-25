@@ -6,13 +6,13 @@ import java.sql.Statement;
 
 import day11.solved.ConnectionUtil;
 
-class Task {
+ class Task {
 	int id;
 	String name;
 	String status;
 }
 
-class TaskDAO {
+public class TaskDAO {
 	public void createTask(Task task) throws DAOException, SQLException {
 		// Write code here to get connection
 		Connection connection = ConnectionUtil.getConnection();
